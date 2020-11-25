@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset="UTF-8">
+      <title>Sample FirebaseUI App</title>
+      <!-- *******************************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet from:
+       * Firebase Console > Overview > Add Firebase to your web app. *
+       ***************************************************************************************** -->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
+
+
+
+      <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.css" />
+      <link rel="stylesheet" href="style/styles.css">
+
+</head>
+
+<body>
+      <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+      <header>
+            <h1 style="font-family: Arial, Helvetica, sans-serif;">Password Manager</h1>
+      </header>
+      <main>
+            <section class="container">
+
+                  <div class="singup">
+                        <h3>Sign Up</h3>
+                        <label>Enter Your Email ID : </label>
+                        <input type="email" name="signup_id" id="signup_id"> <br></br>
+                        <label>Enter Your Password : </label>
+                        <input type="password" name="signup_pass" id="signup_pass"> <br></br>
+                        <button id="signup_button">SIGN UP</button>
+                  </div>
+
+                  <div class="signin">
+                        <h3>Sign In</h3>
+                        <label>Enter Your Email ID : </label>
+                        <input type="email" name="signin_id" id="signin_id"> <br></br>
+                        <label>Enter Your Password : </label>
+                        <input type="password" name="signin_pass" id="signin_pass"> <br></br>
+                        <button id="signin_button">SIGN IN</button>
+                  </div>
+
+                  <div id="firebaseui-auth-container"></div>
+
+            </section>
+      </main>
+      <script src="js/index.js"></script>
+</body>
+
+</html>

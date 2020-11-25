@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
+
+</head>
+
+<body>
+      <h1> successfully logged in</h1>
+      <form id="send" style="display: flex;justify-content: space-around;">
+
+
+            <input type="text" name="website" id="website" placeholder="Website Name" required>
+            <br></br>
+
+            <input type="text" name="email" id="email" placeholder="Email-ID / UserName" required>
+            <br></br>
+
+            <input type="text" name="password" id="password" placeholder="Password" required>
+            <br></br>
+
+            <input type="submit" value="Add">
+      </form>
+
+      <script src="js/profile.js"></script>
+</body>
+
+</html>

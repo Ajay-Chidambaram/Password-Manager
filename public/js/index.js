@@ -1,6 +1,6 @@
 
 // Terminal Command
-// cc
+// Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 /****************************************************************
  *                DOM Manipulations

@@ -9,24 +9,47 @@
       <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <style>
+            .w3-btn {
+                  width: 150px;
+                  color: white;
+                  background-color: #2196F3;
+            }
+
+            .w3-btn:hover {
+                  background-color: gray;
+                  color: black;
+            }
+      </style>
 
 </head>
 
 <body>
-      <h1> successfully logged in</h1>
-      <form id="send" style="display: flex;justify-content: space-around;">
+      <div class="w3-container w3-blue">
+            <h1> Add Your Informations</h1>
+      </div>
+      <form class="w3-container" id="send">
 
+            <p>
+                  <label>Website Name</label>
+                  <input class="w3-input" type="text" name="website" id="website" placeholder="Website Name" required>
+            </p>
+            <br>
+            <p>
+                  <label>Email ID</label>
+                  <input class="w3-input" type="text" name="email" id="email" placeholder="Email-ID / UserName"
+                        required>
+            </p>
+            <br>
+            <p>
+                  <label>Password</label>
+                  <input class="w3-input" type="text" name="password" id="password" placeholder="Password" required>
+            </p>
 
-            <input type="text" name="website" id="website" placeholder="Website Name" required>
-            <br></br>
+            <br>
 
-            <input type="text" name="email" id="email" placeholder="Email-ID / UserName" required>
-            <br></br>
-
-            <input type="text" name="password" id="password" placeholder="Password" required>
-            <br></br>
-
-            <input type="submit" value="Add">
+            <input class="w3-btn w3-round-xxlarge" type="submit" value="Add">
       </form>
 
       <script src="js/profile.js"></script>

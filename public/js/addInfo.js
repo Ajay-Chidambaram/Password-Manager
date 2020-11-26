@@ -67,6 +67,9 @@ firebase.auth().onAuthStateChanged((user) => {
                   e.preventDefault();
                   console.log("fun :: ", website.value, email.value, password.value);
                   writeUserData(uid, website.value, email.value, password.value);
+                  website.value = "";
+                  email.value = "";
+                  password.value = "";
             });
 
       } else {

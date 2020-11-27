@@ -26,15 +26,57 @@ function retrieveData(userId) {
             console.log("retrieve Data :: ", data);
 
             //console.log(Object.keys(data).length);
-
+            /*
             for (let x in data) {
                   var row = table.insertRow(1);
                   var cell1 = row.insertCell(0);
                   var cell2 = row.insertCell(1);
                   var cell3 = row.insertCell(2);
+                  var cell4 = row.insertCell(3);
                   cell1.innerHTML = x;
                   cell2.innerHTML = data[x].email;
                   cell3.innerHTML = data[x].password;
+            }
+            */
+            let table = document.getElementById("myTable");
+            let count = 1;
+            for (let x in data) {
+                  var row = document.createElement("tr");
+                  var cell0 = document.createElement("td");
+                  var cell1 = document.createElement("td");
+                  var cell2 = document.createElement("td");
+                  var cell3 = document.createElement("td");
+                  var cell4 = document.createElement("td");
+
+                  cell0.innerHTML = String(count);
+                  cell1.innerHTML = x;
+                  cell2.innerHTML = data[x].email;
+                  cell3.innerHTML = data[x].password;
+
+
+                  let eye = document.createElement("i");
+                  cell3.id = count + "s";
+                  eye.id = count;
+                  eye.setAttribute("class", "far fa-eye");
+                  let len = cell3.innerHTML.length;
+
+                  cell3.innerHTML = "*".repeat(len);
+
+                  eye.onmousedown = function () { mousedown(this.id, data[x].password) };
+                  eye.onmouseup = function () { mouseup(this.id, len) };
+                  count = count + 1;
+                  cell4.appendChild(eye);
+                  cell4.style = "border:0;display:flex;align-items:center;justify-content:center;"
+
+
+
+                  row.appendChild(cell0);
+                  row.appendChild(cell1);
+                  row.appendChild(cell2);
+                  row.appendChild(cell3);
+                  row.appendChild(cell4);
+
+                  table.appendChild(row);
             }
       });
 }
@@ -58,3 +100,26 @@ firebase.auth().onAuthStateChanged((user) => {
             window.location.assign("./index.html");
       }
 });
+
+
+function mouseup(id, len) {
+      console.log("visiblity mouse up", id);
+
+      let password = document.getElementById(id + "s");
+      console.log(password.innerHTML);
+      password.innerHTML = "*".repeat(len);
+      // toggle the eye slash icon
+
+      let eye = document.getElementById(id);
+}
+
+
+function mousedown(id, pass) {
+      console.log("visiblity mouse down", id);
+
+      let password = document.getElementById(id + "s");
+      console.log(password.innerHTML);
+      password.innerHTML = pass;
+      // toggle the eye slash icon
+
+}

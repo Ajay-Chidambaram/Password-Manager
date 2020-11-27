@@ -30,8 +30,7 @@ section {
 }
 
 #myTable td, #myTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+  padding: 16px;
 }
 
 #myTable tr:nth-child(even) {
@@ -48,5 +47,9 @@ section {
   text-align: left;
   background-color: #4CAF50;
   color: white;
+}
+
+i {
+  cursor: pointer;
 }
 /*# sourceMappingURL=viewInfo.css.map */

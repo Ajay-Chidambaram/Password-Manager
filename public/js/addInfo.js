@@ -40,14 +40,6 @@ function writeUserData(userId, websiteName, email, password) {
             email: email,
             password: password
       });
-
-      /*
-      var starCountRef = firebase.database().ref('users/' + userId);
-      starCountRef.on('value', (snapshot) => {
-            const data = snapshot.val();
-            console.log("retrieve Data :: ", data);
-      });
-      */
 }
 
 
